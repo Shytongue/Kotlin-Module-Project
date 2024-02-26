@@ -1,3 +1,10 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val noteApp = NoteApp()
+    noteApp.start()
+}
+
+
+data class Note(val name : String, val text : String)
+data class Archive(val name : String) {
+    val notes : MutableList<Note> = mutableListOf()
 }
